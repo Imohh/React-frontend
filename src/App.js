@@ -17,7 +17,7 @@ class App extends React.Component {
   }
 
   handleChange(id) {
-    
+    console.log("changed", id)
   }
 
   render() {
