@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import './App.css'
-import Conditional from './Conditional'
+//import Conditional from './Conditional'
 // import TodoItem from './components/TodoItem'
 // import todosData from './todosData'
 // import Example from './Example'
@@ -172,24 +172,44 @@ import Conditional from './Conditional'
 //   }
 // }
 
-class App extends Component {
+
+//CONDITIONAL RENDERING
+// class App extends Component {
+//   constructor() {
+//     super()
+//     this.state = {
+//       unreadMessages: [
+//         "Call mom now!",
+//         "New spam email available. All links are definitely safe to click."
+//       ]
+//     }
+//   }
+
+//   render() {
+//     return (
+//       <div>
+//         {
+//           this.state.unreadMessages.length > 0 &&
+//           <h2>You have {this.state.unreadMessages.length} unread messages!</h2>
+//         }
+//       </div>
+//     )
+//   }
+// }
+
+
+class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      unreadMessages: [
-        "Call mom now!",
-        "New spam email available. All links are definitely safe to click."
-      ]
+      isLoggedIn: true
     }
   }
-
   render() {
-    return (
+    return(
       <div>
-        {
-          this.state.unreadMessages.length > 0 &&
-          <h2>You have {this.state.unreadMessages.length} unread messages!</h2>
-        }
+        {this.state.isLoggedIn ? <h2>This user is Logged In</h2>
+        : <h2>This user is not logged In</h2>}
       </div>
     )
   }
