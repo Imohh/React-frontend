@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import './App.css'
+import Form from './Form'
 // import TodoItem from './components/TodoItem'
 // import todosData from './todosData'
 //import Conditional from './Conditional'
@@ -259,51 +260,12 @@ import './App.css'
 //   }
 // }
 
-
-//FORMS
 class App extends Component {
-  constructor() {
-    super()
-    this.state = {
-      firstName: "",
-      lastName: ""
-    }
-    this.handleChange = this.handleChange.bind(this)
-  }
-
-  handleChange(event) {
-    this.setState({
-      [event.target.name]: event.target.value
-    })
-  }
-
   render() {
-    return(
-      <div>
-        <form>
-          <input 
-            name="firstName"
-            type="text" 
-            placeholder="First Name" 
-            onChange={this.handleChange}
-          />
-
-          <input 
-            name="lastName"
-            type="text" 
-            placeholder="Last Name" 
-            onChange={this.handleChange}
-          />
-        </form>
-        
-      
-      <h2>{this.state.firstName} {this.state.lastName}</h2>
-
-      </div>
+    return (
+      <Form />
     )
   }
 }
-
-
 
 export default App
