@@ -1,14 +1,14 @@
 import React, {Component} from 'react'
 import './App.css'
-//import Conditional from './Conditional'
 // import TodoItem from './components/TodoItem'
 // import todosData from './todosData'
+//import Conditional from './Conditional'
 // import Example from './Example'
 // import myExample from './myExample'
 
 
 //TODO ITEM
-// class App extends React.Component {
+// class App extends Component {
 //   constructor() {
 //     super()
 //     this.state = {
@@ -198,18 +198,64 @@ import './App.css'
 // }
 
 
-class App extends React.Component {
+//CONDITIONAL RENDERING PART 2
+// class App extends Component {
+//   constructor() {
+//     super()
+//     this.state = {
+//       isLoggedIn: false
+//     }
+//     this.handleClick = this.handleClick.bind(this)
+//   }
+
+//   handleClick () {
+//     console.log(this.state.isLoggedIn)
+//   }
+
+//   render() {
+//     return(
+//       <div>
+//         {this.state.isLoggedIn ? <h2>This user is Logged In</h2>
+//         : <h2>This user is logged Out</h2>}
+
+//         {this.state.isLoggedIn ? <button>Logged In</button> : <button>Logged Out</button>}
+//         <br/><br/>
+//         <button onClick={this.handleClick}>Logged In</button>
+//       </div>
+//     )
+//   }
+// }
+
+
+//FETCHING DATA FROM AN API
+
+class App extends Component {
   constructor() {
     super()
     this.state = {
-      isLoggedIn: true
+      loading: true,
+      person: null
     }
   }
+
+  async componentDidMount() {
+    const url = "https://api.randomuser.me/"
+    const response = await fetch(url)
+    const data = await response.json()
+    this.setState({person: data.results[0], loading:false})
+  }
+
   render() {
-    return(
+    return (
       <div>
-        {this.state.isLoggedIn ? <h2>This user is Logged In</h2>
-        : <h2>This user is not logged In</h2>}
+        {this.state.loading || !this.state.person ? 
+        <p>loading...</p>
+         : 
+        
+        <div>{this.state.person.name.first} 
+        {this.state.person.name.last}
+        <img src={this.state.person.picture.large}/></div>
+        }
       </div>
     )
   }
