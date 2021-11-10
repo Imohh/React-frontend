@@ -33,34 +33,6 @@ import './App.css'
 // }
 
 
-
-class App extends Component {
-  constructor() {
-    super()
-    this.state = {
-      firstName: ""
-    }
-    this.handleChange = this.handleChange.bind(this)
-  }
-
-  handleChange(event) {
-    this.setState({
-      firstName: event.target.value
-    })
-  }
-
-  render() {
-    return(
-      <form>
-        <input type="text" placeholder="First Name"
-        onChange={this.handleChange} />
-        <h1>{this.state.firstName}</h1>
-      </form>
-    )
-  }
-}
-
-
 // class App extends Component {
 //   constructor() {
 //     super()
@@ -286,5 +258,52 @@ class App extends Component {
 //     )
 //   }
 // }
+
+
+//FORMS
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      firstName: "",
+      lastName: ""
+    }
+    this.handleChange = this.handleChange.bind(this)
+  }
+
+  handleChange(event) {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
+  render() {
+    return(
+      <div>
+        <form>
+          <input 
+            name="firstName"
+            type="text" 
+            placeholder="First Name" 
+            onChange={this.handleChange}
+          />
+
+          <input 
+            name="lastName"
+            type="text" 
+            placeholder="Last Name" 
+            onChange={this.handleChange}
+          />
+        </form>
+        
+      
+      <h2>{this.state.firstName} {this.state.lastName}</h2>
+
+      </div>
+    )
+  }
+}
+
+
 
 export default App
