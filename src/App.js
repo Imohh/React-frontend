@@ -34,6 +34,32 @@ import './App.css'
 
 
 
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      firstName: ""
+    }
+    this.handleChange = this.handleChange.bind(this)
+  }
+
+  handleChange(event) {
+    this.setState({
+      firstName: event.target.value
+    })
+  }
+
+  render() {
+    return(
+      <form>
+        <input type="text" placeholder="First Name"
+        onChange={this.handleChange} />
+        <h1>{this.state.firstName}</h1>
+      </form>
+    )
+  }
+}
+
 
 // class App extends Component {
 //   constructor() {
@@ -229,36 +255,36 @@ import './App.css'
 
 //FETCHING DATA FROM AN API
 
-class App extends Component {
-  constructor() {
-    super()
-    this.state = {
-      loading: true,
-      person: null
-    }
-  }
+// class App extends Component {
+//   constructor() {
+//     super()
+//     this.state = {
+//       loading: true,
+//       person: null
+//     }
+//   }
 
-  async componentDidMount() {
-    const url = "https://api.randomuser.me/"
-    const response = await fetch(url)
-    const data = await response.json()
-    this.setState({person: data.results[0], loading:false})
-  }
+//   async componentDidMount() {
+//     const url = "https://api.randomuser.me/"
+//     const response = await fetch(url)
+//     const data = await response.json()
+//     this.setState({person: data.results[0], loading:false})
+//   }
 
-  render() {
-    return (
-      <div>
-        {this.state.loading || !this.state.person ? 
-        <p>loading...</p>
-         : 
+//   render() {
+//     return (
+//       <div>
+//         {this.state.loading || !this.state.person ? 
+//         <p>loading...</p>
+//          : 
         
-        <div>{this.state.person.name.first} 
-        {this.state.person.name.last}
-        <img src={this.state.person.picture.large}/></div>
-        }
-      </div>
-    )
-  }
-}
+//         <div>{this.state.person.name.first} 
+//         {this.state.person.name.last}
+//         <img src={this.state.person.picture.large}/></div>
+//         }
+//       </div>
+//     )
+//   }
+// }
 
 export default App
