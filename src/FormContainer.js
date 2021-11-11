@@ -5,14 +5,27 @@ class Form extends Component {
       super()
       this.state = {
         firstName: "",
-        lastName: ""
+        lastName: "",
+        age: "",
+        gender: "",
+        destinastion: "",
+        isVegan: false,
+        isKosher: false,
+        isLactoseFree: false
       }
       this.handleChange = this.handleChange.bind(this)
     }
   
     handleChange(event) {
+      const {name, value, type, checked} = event.target
+      type === "checkbox" ?
+
+        this.setState({
+          [name]: checked
+        })
+      :
       this.setState({
-        [event.target.name]: event.target.value
+        [name]: value
       })
     }
   
