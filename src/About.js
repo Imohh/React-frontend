@@ -1,11 +1,12 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
-function About() {
-    return(
-        <div>
-            <h1>About Page</h1>
-        </div>
-    )
-}
-
-export default About
+export default function About() {
+    return (
+      <main style={{ padding: "1rem 0" }}>
+        <h2>This is the About Page</h2>
+        <Link to="/home">Home</Link>
+        <Link to="/">Go Back</Link>
+      </main>
+    );
+  }
