@@ -1,5 +1,7 @@
 import React from 'react';
 import About from './About';
+import Home from './Home';
+//import Nav from './Nav'
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
@@ -7,22 +9,16 @@ function App() {
   return(
     <Router>
       <div>
-        <About/>
         <Routes>
-          <Route patch="/" exact component={Home} />
-          <Route patch="/about" component={About} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route path="/" render={() => <div>404</div>}/>
         </Routes>
       </div>
     </Router>
-    
   )
 }
 
-const Home = () => (
-  <div>
-    <h1>Home Page</h1>
-  </div>
 
-)
 
 export default App
