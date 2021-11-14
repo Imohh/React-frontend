@@ -1,5 +1,6 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, Component} from 'react'
 import axios from 'axios'
+import Home from './Home'
 //import Nav from './Nav'
 
 export default function App() {
@@ -36,6 +37,9 @@ useEffect(() => {
   });
 });
 
+
+
+
   return (
     <div>
       {/* <Nav/> */}
@@ -68,6 +72,9 @@ useEffect(() => {
       {/* USE EFFECT START */}
       <h2>hello world</h2>
       {data}
+
+
+        <Home/>
 
     </div>
   );
