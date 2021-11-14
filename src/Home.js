@@ -5,14 +5,15 @@ import React from 'react'
 class Home extends React.Component{
 
     state = {
-        loading: true
+        loading: true,
+        person: null
     }
 
     async componentDidMount() {
-        const url ="https://jsonplaceholder.typicode.com/posts"
+        const url ="https://api.randomuser.me/"
         const response = await fetch(url)
         const data = await response.json()
-        console.log(data)
+        this.setState({person: data.results[0], loading: false})
     }
     render() {
         
@@ -22,7 +23,17 @@ class Home extends React.Component{
                 {/* <Link to="/about">About</Link>
                 <Link to="/">Go Back</Link> */}
     
-                {this.state.loading ? <h1>loading...</h1>:<h1>not loading yet...</h1>}
+                {this.state.loading || !this.state.person ? 
+                <h1>loading...</h1>
+                :
+                <div>
+                    <div>{this.state.person.name.first}</div> 
+                    <div>{this.state.person.name.last}</div>
+                </div>
+                
+                
+                }
+                
             </div>
         )
     }
