@@ -4,6 +4,8 @@ import React from 'react'
 
 class Home extends React.Component{
 
+
+    //FETCH API
     state = {
         loading: true,
         person: null
@@ -15,6 +17,11 @@ class Home extends React.Component{
         const data = await response.json()
         this.setState({person: data.results[0], loading: false})
     }
+    //END OF FETCH API
+
+
+    
+
     render() {
         
         return (
@@ -23,6 +30,8 @@ class Home extends React.Component{
                 {/* <Link to="/about">About</Link>
                 <Link to="/">Go Back</Link> */}
     
+
+                {/* FETCH API */}
                 {this.state.loading || !this.state.person ? 
                 <h1>loading...</h1>
                 :
@@ -30,9 +39,10 @@ class Home extends React.Component{
                     <div>{this.state.person.name.first}</div> 
                     <div>{this.state.person.name.last}</div>
                 </div>
-                
-                
+                // END OF FETCH API
                 }
+
+                
                 
             </div>
         )
