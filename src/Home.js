@@ -1,6 +1,6 @@
 import React from 'react'
 // import { Link } from 'react-router-dom'
-import axios from 'axios'
+// import axios from 'axios'
 
 class Home extends React.Component{
 
@@ -8,14 +8,11 @@ class Home extends React.Component{
         loading: true
     }
 
-    componentDidMount() {
-        axios.get("https://jsonplaceholder.typicode.com/posts")
-        .then(response => {
-            this.setState({
-                posts: response.data
-            })
-            console.log(response.data)
-        })
+    async componentDidMount() {
+        const url ="https://jsonplaceholder.typicode.com/posts"
+        const response = await fetch(url)
+        const data = await response.json()
+        console.log(data)
     }
     render() {
         
