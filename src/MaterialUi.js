@@ -11,6 +11,9 @@ import TextField from '@material-ui/core/TextField'
 import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import { orange, green } from '@material-ui/core/colors'
 import Typography from '@material-ui/core/Typography'
+import Container from '@material-ui/core/Container'
+import Paper from '@material-ui/core/Paper'
+import Grid from '@material-ui/core/Grid'
 
 const useStyles = makeStyles({
     root: {
@@ -64,47 +67,61 @@ function CheckboxExample() {
 function MaterialUi() {
     return (
         <ThemeProvider theme={theme}>
+            <Container maxWidth="sm">
+                <div className="App">
+                    <header className="App-header">
+                        <Typography variant="h2" component="div">
+                            Welcome to Grep
+                        </Typography>
+                        <Typography variant="subtitle1">
+                            Learn how to use Material UI
+                        </Typography>
+                        <ButtonStyled />
 
-        <div className="App">
-            <header className="App-header">
-                <Typography variant="h2" component="div">
-                    Welcome to Grep
-                </Typography>
-                <Typography variant="subtitle1">
-                    Learn how to use Material UI
-                </Typography>
-                <ButtonStyled />
-                <TextField
-                    variant="filled"
-                    color="secondary"
-                    type="email"
-                    label="The Time"
-                    placeholder="starboy@gmail.com"
-                />
-                <CheckboxExample/>
-                <ButtonGroup>
-                    <Button 
-                        startIcon={<SaveIcon />}
-                        size="large"
-                        href="#" 
-                        variant="contained" 
-                        color="primary">
-                            Save
-                    </Button>
-                    <Button 
-                        startIcon={<DeleteIcon />}
-                        size="large"
-                        href="#" 
-                        variant="contained" 
-                        color="secondary">
-                            Discard
-                    </Button>
-                </ButtonGroup>
+                        <Grid container>
+                            <Grid item>
+                                <Paper style={{ height:75, width:50,}}/>
+                            </Grid>
+                            <Grid item>
+                                <Paper style={{ height:75, width:50,}}/>
+                            </Grid>
+                            <Grid item>
+                                <Paper style={{ height:75, width:50,}}/>
+                            </Grid>
+                        </Grid>
+
+                        <TextField
+                            variant="filled"
+                            color="secondary"
+                            type="email"
+                            label="The Time"
+                            placeholder="starboy@gmail.com"
+                        />
+                        <CheckboxExample/>
+                        <ButtonGroup>
+                            <Button 
+                                startIcon={<SaveIcon />}
+                                size="large"
+                                href="#" 
+                                variant="contained" 
+                                color="primary">
+                                    Save
+                            </Button>
+                            <Button 
+                                startIcon={<DeleteIcon />}
+                                size="large"
+                                href="#" 
+                                variant="contained" 
+                                color="secondary">
+                                    Discard
+                            </Button>
+                        </ButtonGroup>
+                            
+                        <img src={logo} className="App-logo" alt="logo"/>
+                    </header>
                     
-                <img src={logo} className="App-logo" alt="logo"/>
-            </header>
-            
-        </div>
+                </div>
+            </Container>
         </ThemeProvider>
     )
 }
