@@ -66,10 +66,8 @@ function MaterialUi() {
         <ThemeProvider theme={theme}>
 
         <div className="App">
-            <h2>Material Ui</h2>
-
             <header className="App-header">
-                <Typography variant="h2">
+                <Typography variant="h2" component="div">
                     Welcome to Grep
                 </Typography>
                 <Typography variant="subtitle1">
