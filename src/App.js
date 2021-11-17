@@ -1,26 +1,22 @@
 import React from 'react'
-import MaterialUi from './MaterialUi'
-
+// import MaterialUi from './MaterialUi'
+import State from  './State'
 
 //import Nav from './Nav'
 
-export default function App() {
-
-
-
-
-
+function App() {
 
   return (
     <div>
       {/* <Nav/> */}
-      <h1>This is the default Page</h1>
-      <br/>
+      {/* <h1>This is the default Page</h1>
+      <br/> */}
+      {/* <MaterialUi /> */}
 
 
-      <MaterialUi />
-
-
+      <State />
     </div>
   );
 }
+
+export default App
