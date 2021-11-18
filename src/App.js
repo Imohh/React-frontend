@@ -1,6 +1,6 @@
 import React from 'react'
 // import MaterialUi from './MaterialUi'
-import State from  './State'
+import Hooks from  './Hooks'
 
 //import Nav from './Nav'
 
@@ -14,7 +14,7 @@ function App() {
       {/* <MaterialUi /> */}
 
 
-      <State />
+      <Hooks />
     </div>
   );
 }

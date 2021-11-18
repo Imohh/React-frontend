@@ -5,7 +5,7 @@ import axios from 'axios'
 
 export default function Hooks() {
 
-  //USESTATE HOOK
+//USESTATE HOOK
 const [counter, setCounter] = useState(0)
 
 function increment() {
