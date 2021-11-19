@@ -4,6 +4,7 @@ import axios from 'axios'
 //import Nav from './Nav'
 
 export default function Hooks() {
+  
 
 //USESTATE HOOK
 const [counter, setCounter] = useState(0)
@@ -11,6 +12,7 @@ const [counter, setCounter] = useState(0)
 function increment() {
   setCounter(counter + 1)
 }
+
 
 const [inputValue, setInputValue] = useState("")
 function onChange(event) {
@@ -33,11 +35,14 @@ useEffect(() => {
   .get("https://jsonplaceholder.typicode.com/comments")
   .then((response) => {
     setData(response.data[0].email);
-    console.log("API WAS CALLED")
   });
 });
 
 
+const [resourceType, setResourceType] = useState('posts')
+useEffect(() => {
+  console.log('render')
+})
 
 
   return (
@@ -57,7 +62,7 @@ useEffect(() => {
       <br/>
       <h2>{inputValue}</h2>
 
-      <br/><br/>
+      <br/>
       <h1>{counter}</h1>
       <button
       onClick={() => {
@@ -69,10 +74,16 @@ useEffect(() => {
       {showText && <p>This is a text</p>}
       {/* END OF USESTATE */}
 
-      {/* USE EFFECT START */}
+      {/* USE EFFECT API START */}
       <h2>hello world</h2>
       {data}
-
+      
+      {/* USE EFFECT START */}
+      <br/>
+      <button onClick={() => setResourceType('posts')}>Posts</button>
+      <button onClick={() => setResourceType('new shit')}>Users</button>
+      <button onClick={() => setResourceType('comments')}>Comments</button>
+      <h1>{resourceType}</h1>
 
 
     </div>

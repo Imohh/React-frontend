@@ -1,6 +1,7 @@
 import React from 'react'
 // import MaterialUi from './MaterialUi'
-import Hooks from  './Hooks'
+import Crash from  './Crash'
+// import TodoForm from  './components/TodoForm'
 
 //import Nav from './Nav'
 
@@ -12,9 +13,10 @@ function App() {
       {/* <h1>This is the default Page</h1>
       <br/> */}
       {/* <MaterialUi /> */}
+      {/* <TodoForm /> */}
 
-
-      <Hooks />
+      <Crash />
+      
     </div>
   );
 }
