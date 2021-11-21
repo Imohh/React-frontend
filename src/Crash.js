@@ -9,7 +9,7 @@ export default function Crash() {
                 type="text"
                 name="firstName"
                 placerholder="first name"
-            />
+            />d
 
             <button onClick={() => {
                 console.log(inputRef.current)
