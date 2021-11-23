@@ -4,10 +4,11 @@ import axios from 'axios'
 
 class About extends React.Component{
 
+    
     constructor(props) {
         super(props)
         this.state = {
-            posts: []
+            posts: "hey there"
         }
     }
 
