@@ -29,6 +29,10 @@ class About extends React.Component{
               <Link to="/home">Home</Link> |{" "}
               <Link to="/">Go Back</Link>
               
+              
+              
+
+
             </main>
         )
     }

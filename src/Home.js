@@ -1,25 +1,11 @@
-import React from 'react'
+import React, {Component} from 'react'
 // import { Link } from 'react-router-dom'
 // import axios from 'axios'
+import Product from './Product'
 
-class Home extends React.Component{
+export default class Home extends Component{
 
     
-
-    // FETCH API
-    // state = {
-    //     loading: true,
-    //     person: null
-    // }
-
-    // async componentDidMount() {
-    //     const url ="https://api.randomuser.me/"
-    //     const response = await fetch(url)
-    //     const data = await response.json()
-    //     this.setState({person: data.results[0], loading: false})
-    // }
-    // END OF FETCH API
-
     state = {
         customersCount: 5,
         customers: [
@@ -27,9 +13,17 @@ class Home extends React.Component{
             {id:2,name:"Imoh", phone:"548-449", address:{city: "Abuja"}},
             {id:3,name:"Precious", phone: null,  address:{city: "London"}},
             {id:4,name:"Ayo", phone:"066-682", address:{city: "Manitoba"}},
-            {id:5,name:"Balogun", phone:"745-734", address:{city: "New York"}}
-        ]
+            {id:5,name:"Balogun", phone:"745-734", address:{city: "New York"}},
+        ],
+        products: [
+            {id:1,productName:"Prada", phone:"123-456"},
+            {id:2,productName:"Louis Vuitton", phone:"548-449"},
+            {id:3,productName:"Dior", phone: null},
+            {id:4,productName:"Zara", phone:"066-682"},
+            {id:5,productName:"Balenciaga", phone:"745-734"},
+        ],
     }
+
 
     render() {
         
@@ -40,16 +34,7 @@ class Home extends React.Component{
                 <Link to="/">Go Back</Link> */}
     
 
-                {/* FETCH API */}
-                {/* {this.state.loading || !this.state.person ? 
-                <h1>loading...</h1>
-                :
-                <div>
-                    <div>{this.state.person.name.first}</div> 
-                    <div>{this.state.person.name.last}</div>
-                </div> */}
-                {/* // END OF FETCH API */}
-                {/* } */}
+                
                 
                 <span>{this.state.customersCount}</span>
                 <button 
@@ -58,7 +43,7 @@ class Home extends React.Component{
                 </button>
 
                 
-                <table>
+                {/* <table>
                     <thead>
                         <tr>
                             <th>#</th>
@@ -82,9 +67,11 @@ class Home extends React.Component{
                         }
                         
                     </tbody>
-                </table>
+                </table> */}
             
-            
+            {this.state.products.map((prod) => {
+                return <Product key={prod.id} id={prod.id}/>
+            } )}
             </div>
         )
     }
@@ -107,6 +94,3 @@ class Home extends React.Component{
 
 }
 
-    
-
-export default Home
