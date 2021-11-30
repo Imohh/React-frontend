@@ -1,5 +1,6 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect, useRef  } from 'react'
 import axios from 'axios'
+import Button from './Button'
 
 //import Nav from './Nav'
 
@@ -24,10 +25,7 @@ const [showText, setShowText] = useState(true)
 // END OF USESTATE
 
 
-//USEEFFECT START
-
-
-// END OF USEEFFECT
+// START OF USEEFFECT
   const [data, setData] = useState("")
 
 useEffect(() => {
@@ -36,13 +34,32 @@ useEffect(() => {
   .then((response) => {
     setData(response.data[0].email);
   });
-});
+}); 
 
 
-const [resourceType, setResourceType] = useState('posts')
+const [resourceType, setResourceType] = useState('')
 useEffect(() => {
   console.log('render')
 })
+// END OF USEEFFECT
+
+// START OF USEREF
+
+const inputRef = useRef(null)
+
+const onClick = () => {
+  inputRef.current.value = ""
+}
+
+// END OF USE REF
+
+// START OF USELAYOUTEFFECT
+// It displays before the page loads and is
+// faster than the useEffect Hook
+
+
+
+//END OF USELAYOUTEFFECT
 
 
   return (
@@ -84,6 +101,26 @@ useEffect(() => {
       <button onClick={() => setResourceType('new shit')}>Users</button>
       <button onClick={() => setResourceType('comments')}>Comments</button>
       <h1>{resourceType}</h1>
+
+      {/* USEREF */}
+      <input placeholder="type here"
+      ref={inputRef}/>
+      <button onClick={onClick}>
+        Click Here
+      </button>
+      <br></br>
+      <br></br>
+
+      {/* // IMPERATIVE HANDLE */}
+      <button>Button From Parent</button>
+      <Button />
+      
+
+
+
+
+
+
 
 
     </div>

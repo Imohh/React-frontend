@@ -9,7 +9,7 @@ export default class State extends React.Component {
             "https://imohcodes.com/assets/img/header.jpg"
         
         ],
-        idx: 0
+        idx: 0,
     }
 
     handleNext = () => {

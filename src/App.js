@@ -4,25 +4,45 @@ import React from 'react'
 import TodoForm from  './components/TodoForm'
 
 import Nav from './Nav'
-// import Example from './Example'
+// import Crash from './Crash'
+import Hooks from './Hooks'
 
 function App() {
 
+//   const tasks = [
+//     {
+//         id: 1,
+//         name: 'Imoh',
+//         age: 24,
+//         color: 'red',
+//     },
+//     {
+//         id: 2,
+//         name: 'Precious',
+//         age: 24,
+//         color: 'blue',
+//     },
+//     {
+//         id: 3,
+//         name: 'Starboy',
+//         age: 24,
+//         color: 'brown',
+//     },
+// ]
+
+ 
+
+
+  
 
 
   return (
     <div>
       <Nav/>
-      {/* <h1>This is the default Page</h1>
-      <br/> */}
-      {/* <MaterialUi /> */}
       <TodoForm />
+      {/* <Crash tasks={tasks} /> */}
 
-      {/* <Crash /> */}
-      
-      {/* <Example /> */}
-
-
+      <Hooks />
 
     </div>
   );
