@@ -1,0 +1,31 @@
+.footer-component {
+  background: blue;
+}
+
+.footer-component button {
+  background: green;
+  width: 200px;
+  height: 40px;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+}
+
+.footer-component h2 {
+  background: yellow;
+}
+
+.footer-component .paragraph1, .footer-component .paragraph2 {
+  background: #00ff2a;
+  text-align: center;
+}
+
+button {
+  background: #f890a2;
+  width: 200px;
+  height: 40px;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+}
+/*# sourceMappingURL=Footer.css.map */

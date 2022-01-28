@@ -1,3 +1,40 @@
-.footer-component {
-    background:red
+$background: hsl(240, 100%, 50%);
+$colors: (
+    "first": #000,
+    "second": #fff,
+    "third": yellow
+);
+
+
+@mixin buttonStyle($color) {
+    background: $color;
+        width: 200px;
+        height: 40px;
+        color: #fff;
+        font-size: 20px;
+        border: none;
 }
+
+.footer-component {
+    background: $background;
+    button {
+        @include buttonStyle(green);
+    }
+    h2 {
+        background: map-get($colors, third)
+    }
+
+    .paragraph1 {
+        background: rgb(0, 255, 42);
+        text-align: center
+    }
+
+    .paragraph2 {
+        @extend .paragraph1
+    }
+}
+
+button {
+    @include buttonStyle(rgb(248, 144, 162));
+}
+

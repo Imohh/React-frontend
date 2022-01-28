@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,AAAC,CACD,UAAU,CAAC,GACf,CAAC",
+    "sources": [
+        "../../src/portfolio/style/home.scss"
+    ],
+    "names": [],
+    "file": "home.min.css"
+}

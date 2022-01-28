@@ -1,17 +1,17 @@
 import React from 'react';
-import Footer from "./components/Footer";
+import Home from "./portfolio/Home";
 
 function App() {
 
-const name = 'Brad'
+
 
   return (
     <div className="container">
 
-      <h1>This is counter app</h1>
-      <h2>Hello {name}</h2>
+      {/* <h1>This is counter app</h1>
+      <button>Home Page</button> */}
 
-      <Footer />
+      <Home />
 
 
    </div>
