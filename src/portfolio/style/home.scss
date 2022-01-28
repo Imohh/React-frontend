@@ -1,3 +1,9 @@
+@import 'config';
+
 body {
     background:red
+}
+
+button {
+    background: $primaryColor
 }

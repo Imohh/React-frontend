@@ -7,6 +7,7 @@ function Home () {
     <>
         <Header />
         <h1>Home Page</h1>
+        <button>Button</button>
     </>
  )
 }

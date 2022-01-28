@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="container">
 
-      {/* <h1>This is counter app</h1>
-      <button>Home Page</button> */}
+      {/* <h1>This is counter app</h1>*/}
+      
 
       <Home />
 
