@@ -5,5 +5,17 @@ body {
 }
 
 button {
-    background: $primaryColor
+    background: $primaryColor;
+    border: none;
+    height: 40px;
+    width: 80px;
+    color: #fff;
+}
+
+.first_home {
+    background:#ccc;
+    height: 60px;
+    .inner_home {
+        background:green
+    }
 }

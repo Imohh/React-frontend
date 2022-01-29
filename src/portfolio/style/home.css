@@ -4,5 +4,18 @@ body {
 
 button {
   background: blue;
+  border: none;
+  height: 40px;
+  width: 80px;
+  color: #fff;
+}
+
+.first_home {
+  background: #ccc;
+  height: 60px;
+}
+
+.first_home .inner_home {
+  background: green;
 }
 /*# sourceMappingURL=home.css.map */
