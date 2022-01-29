@@ -1,5 +1,7 @@
 body {
   background: red;
+  padding: 0;
+  margin: 0;
 }
 
 button {
@@ -17,5 +19,9 @@ button {
 
 .first_home .inner_home {
   background: green;
+}
+
+.first_home h1 {
+  color: #fff;
 }
 /*# sourceMappingURL=home.css.map */

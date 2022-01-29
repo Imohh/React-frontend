@@ -1,7 +1,9 @@
 @import 'config';
 
 body {
-    background:red
+    background:red;
+    padding: 0;
+    margin: 0;
 }
 
 button {
@@ -17,5 +19,9 @@ button {
     height: 60px;
     .inner_home {
         background:green
+
+    }
+    h1 {
+        color:#fff
     }
 }
