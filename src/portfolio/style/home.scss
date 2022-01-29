@@ -26,3 +26,7 @@ button {
         text-align: center
     }
 }
+
+.second_home {
+    @include newStyle()
+}
