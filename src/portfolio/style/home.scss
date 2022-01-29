@@ -29,4 +29,7 @@ button {
 
 .second_home {
     @include newStyle()
+    h2 {
+        background:yellow;
+    }
 }
