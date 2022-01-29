@@ -14,6 +14,17 @@ function Home () {
                 <h1>Testing SCSS</h1>
             </div>
         </div>
+
+        <div className="second_home">
+            <div className="second_inner">
+                <h2>Heading</h2>
+                <p>This is the first paragraph. This is the first paragraph. This is the first paragraph.
+                This is the first paragraph. This is the first paragraph.
+                This is the first paragraph. This is the first paragraph.
+                </p>
+            </div>   
+        </div>
+
     </>
  )
 }

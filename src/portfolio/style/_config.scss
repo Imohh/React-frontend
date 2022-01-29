@@ -2,3 +2,10 @@ $primaryColor: blue;
 $secondaryColor: #333;
 $white: #fff;
 $black: #000;
+
+@mixin newStyle() {
+    padding: 10px;
+    text-align: center;
+    background: $white;
+    color: $white
+}
