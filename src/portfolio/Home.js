@@ -8,6 +8,12 @@ function Home () {
         <Header />
         <h1>Home Page</h1>
         <button>Button</button>
+
+        <div className="first_home">
+            <div className="inner_home">
+                <h1>Testing SCSS</h1>
+            </div>
+        </div>
     </>
  )
 }
