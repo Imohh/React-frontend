@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,IAAI,CAAC;EACD,UAAU,EAAC,GACf;CAAC",
+    "mappings": "AAEA,AAAA,IAAI,CAAC;EACD,UAAU,EAAC,GACf;CAAC;;AAED,AAAA,MAAM,CAAC;EACH,UAAU,ECPC,IAAI;CDQlB",
     "sources": [
-        "home.scss"
+        "home.scss",
+        "_config.scss"
     ],
     "names": [],
     "file": "home.css"

@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,IAAI,AAAC,CACD,UAAU,CAAC,GACf,CAAC",
+    "mappings": "AAEA,AAAA,IAAI,AAAC,CACD,UAAU,CAAC,GACf,CAAC,AAED,AAAA,MAAM,AAAC,CACH,UAAU,CCPC,IAAI,CDQlB",
     "sources": [
-        "../../src/portfolio/style/home.scss"
+        "../../src/portfolio/style/home.scss",
+        "../../src/portfolio/style/_config.scss"
     ],
     "names": [],
     "file": "home.min.css"
