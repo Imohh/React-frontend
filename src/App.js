@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from "./portfolio/Home";
+import Joke from "./components/Joke";
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
       {/* <h1>This is counter app</h1>*/}
       
 
-      <Home />
+      <Joke />
 
 
    </div>
