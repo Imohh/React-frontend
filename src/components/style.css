@@ -1,0 +1,22 @@
+.task {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.task .header-3 {
+    float: left;
+    display: block;
+}
+
+.task img {
+    float: right;
+    display: block;
+}
+
+.task .reminder {
+    border-left: 5px solid green 
+}
+
+.task p {
+    display: block;
+}
