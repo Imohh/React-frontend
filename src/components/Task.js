@@ -4,7 +4,7 @@ import './style.css'
 
 const Task = ({ task, onDelete, onToggle }) => {
     return (
-        <div className="task" onClick={() => onToggle(task.id)}>
+        <div className="task" onDoubleClick={() => onToggle(task.id)}>
             <h3 className="header-3">{task.text}</h3>
             <img
              src={shopping} 
