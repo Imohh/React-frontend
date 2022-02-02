@@ -20,3 +20,27 @@
 .task p {
     display: block;
 }
+
+.form-control {
+    padding:10px
+}
+
+.form-control input {
+    padding: 10px;
+}
+
+.add-form {
+    border: 1px solid #000;
+    margin: 5%;
+    padding: 20px
+}
+
+ input[type=submit] {
+    cursor: pointer;
+    background: #000;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    margin-bottom: 5%;
+    width: 100%
+}
