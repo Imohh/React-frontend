@@ -10,7 +10,7 @@ const Tasks = ({tasks, onDelete, onToggle}) => {
                     onDelete={onDelete}
                     onToggle={onToggle}
                 />
-            ) )}
+            ))}
         </div>
     )
 }

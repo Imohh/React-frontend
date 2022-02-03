@@ -1,21 +1,20 @@
-import image from "../images/shopping-bag.png"
-import './style.css'
+import image from '../images/shopping-bag.png'
 
-const Task = ({ task, onDelete }) => {
-    // const onDelete = () => {
-    //     console.log('click')
-    // }
-
+const Task = ({task, onDelete}) => {
     return (
-        <div className="task">
-            <h3>{task.name}</h3>
-            <img src={image} 
-            alt="" 
-            width={20} 
-            onClick={()=> onDelete(task.id)}
-            style={{cursor: 'pointer'}}
-            />
-            <p>{task.date}</p>
+        <div>
+            <div>
+                <h1>{task.name}</h1>
+                <p>{task.date}</p>
+                <img 
+                    src={image} 
+                    width={20} 
+                    alt=""
+                    style={{cursor: 'pointer'}}
+                    onClick={() => onDelete(task.id)}
+                />
+            </div>
+
         </div>
     )
 }

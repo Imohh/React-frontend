@@ -1,45 +1,42 @@
-import { useState } from 'react'
+import {useState} from 'react'
 import Tasks from './Tasks'
 
-
 const Home = () => {
+const [tasks, setTasks] = useState([
+    {
+        id: 1,
+        name: "return the book",
+        date: "2nd January 2021",
+        reminder: false
+    },
+    {
+        id: 2,
+        name: "Buy the food",
+        date: "18th May 2019",
+        reminder: true
+    },
+    {
+        id: 3,
+        name: "Lock the car",
+        date: "15th February 2020",
+        reminder: false
+    },
+])
 
-    const [tasks, setTasks] = useState([
-        {
-            id: 1,
-            name: "Imoh Precious",
-            date: "2nd Feb 2021",
-            reminder:false
-        },
-        {
-            id: 2,
-            name: "Starboy Wizzy",
-            date: "15th Dec 2021",
-            reminder:false
-        },
-        {
-            id: 3,
-            name: "Ayodeji Balogun",
-            date: "18th Mar 2021",
-            reminder:false
-        },
-    ])
-
-    const deleteTask = (id) => {
-        setTasks(tasks.filter((task) => task.id !== id))
-    }
+const deleteTask = (id) => {
+    setTasks(tasks.filter((task) => task.id !== id))
+    // console.log(id)
+}
 
     return (
         <div>
-            
-            {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} /> 
+            {tasks.length > 0 ? 
+                <Tasks tasks={tasks} onDelete={deleteTask} />
             :
-            "no item to show"}
-            
+            "There is no Task to show"
+            }
         </div>
     )
 }
-
-
 
 export default Home
