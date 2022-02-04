@@ -1,21 +1,24 @@
-// import { useState } from 'react'
-import AddTask from './AddTask'
+import React from 'react'
+import PropTypes from 'prop-types'
+import Button from './Button'
 
-const Header = () => {
+const Header = ({ title, onAdd, showAdd }) => {
 
-const onSubmit = () => {
 
+	return (
+		<header>
+			<h1>{title}</h1>
+			<Button color={showAdd ? 'red' : 'green'} text={showAdd ? 'Close' : 'Add'} onClick={onAdd}  />
+		</header>
+	)
 }
 
-    return(
-        <div>
-            <h1>Task Tracker</h1>
-            <button>Add</button>
-            <AddTask
-                onSubmit={onSubmit}
-            />
-        </div>
-    )
+Header.defaultProps = {
+	title: 'Task Tracker',
 }
+
+Header.propTypes = {
+	title: PropTypes.string.isRequired,
+} 
 
 export default Header

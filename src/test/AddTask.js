@@ -1,32 +1,41 @@
+import './style.css'
 import {useState} from 'react'
-const AddTask = ({tasks, onSubmit}) => {
-    const [text, setText] = useState("")
 
-    const handleChange = (e) => {
-        setText(e.target.value)
+const AddTask = ({ onAdd }) => {
+const [text, setText] = useState("");
+const [day, setDay] = useState("");
+// const display = () => {
+//     setAddTask((addTask) => console.log())
+//}
+const onSubmit = (e) => {
+    e.preventDefault()
+    
+    if(!text) {
+        alert('please add text')
+        return
     }
-    return (
-        <>
-            <form onSubmit={onSubmit}>
-                <label>Name:</label>
-                <input 
-                    type="text"
-                    value={text}
-                    onChange={handleChange}
-                />
-                <label>Date:</label>
-                <input 
-                    type="text"
-                />
-                <input 
-                    type="submit" 
-                    value="submit"
-                />
-            </form>
 
-            <h1>{text}</h1>
-        </>
-        
+    onAdd({text, day})
+
+    setText('')
+    setDay('')
+
+}
+
+
+    return (
+        <form className='add-form' onSubmit={onSubmit}>
+            <div className="form-control">
+                <label>Task</label>
+                <input type='text' placeholder='Add Task' value={text} onChange={(e) => setText(e.target.value)} />
+            </div>
+            <div className="form-control">
+                <label>Day & Time</label>
+                <input type='text' placeholder='Add Day and Time' value={day} onChange={(e) => setDay(e.target.value)} />
+            </div>
+
+            <input className="submit-form" type='submit' value='Save Task' />
+        </form>
 
     )
 }
