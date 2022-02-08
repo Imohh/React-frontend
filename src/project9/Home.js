@@ -33,6 +33,7 @@ const Home = () => {
             </form>
 
             <List items={list} />
+            <p>Clear All</p>
         </>
     )
 }
