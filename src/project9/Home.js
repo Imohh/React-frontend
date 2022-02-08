@@ -18,6 +18,7 @@ const Home = () => {
             const newItem = {id: new Date().getTime().toString(), title:name}
         setList([...list, newItem])
         }
+        setName('')
         
     }
 
