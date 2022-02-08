@@ -33,7 +33,7 @@ const Home = () => {
             </form>
 
             <List items={list} />
-            <button>Clear All</button>
+            {list.length> 0 && (<button>Clear All</button>)}
         </>
     )
 }
