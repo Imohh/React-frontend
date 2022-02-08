@@ -1,4 +1,4 @@
-const List = ([items]) => {
+const List = ({items}) => {
     return(
         <>
             {items.map((item) => (

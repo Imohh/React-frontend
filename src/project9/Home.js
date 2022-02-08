@@ -11,7 +11,7 @@ const Home = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         if (!name) {
-
+            
         } else if (name && isEditing) {
 
         } else {
