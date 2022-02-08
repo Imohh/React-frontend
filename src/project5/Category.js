@@ -1,9 +1,16 @@
-const Category = ({allCategory, displayData, filteritems }) => {
+const Category = ({filterItems }) => {
     return (
         <>
-            <button
-            onClick={() => filteritems('breakfast')}>
+            <button onClick={() => filterItems('all')}>
+                All
+            </button>
+
+            <button onClick={() => filterItems('breakfast')}>
                 breakfast
+            </button>
+
+            <button onClick={() => filterItems('lunch')}>
+                lunch
             </button>
             
         </>
