@@ -6,7 +6,7 @@ const List = ({items, deleteItem}) => {
                     <p>{item.title}</p>
                     <div>
                         <button>Edit</button>
-                        <button onClick={() => deleteItem(item.id)}>Delete</button>
+                        <button>Delete</button>
                     </div>
                 </article>
             ))}
