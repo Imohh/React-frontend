@@ -19,7 +19,10 @@ const Home = () => {
         setList([...list, newItem])
         }
         setName('')
-        
+    }
+
+    const deleteItem = (id) => {
+        // setName(list.filter((name) => name.id !== id))
     }
 
     return(
@@ -33,8 +36,8 @@ const Home = () => {
                 <button>Add</button>
             </form>
 
-            <List items={list} />
-            {list.length> 0 && (<button>Clear All</button>)}
+            <List deleteItem={deleteItem} items={list} />
+            {list.length> 0 && (<button onClick={()=> setList([])}>Clear All</button>)}
         </>
     )
 }

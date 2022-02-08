@@ -1,4 +1,4 @@
-const List = ({items}) => {
+const List = ({items, deleteItem}) => {
     return(
         <>
             {items.map((item) => (
@@ -6,7 +6,7 @@ const List = ({items}) => {
                     <p>{item.title}</p>
                     <div>
                         <button>Edit</button>
-                        <button>Delete</button>
+                        <button onClick={() => deleteItem(item.id)}>Delete</button>
                     </div>
                 </article>
             ))}
