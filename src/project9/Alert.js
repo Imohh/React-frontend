@@ -1,7 +1,7 @@
-const Alert = () => {
+const Alert = ({type,msg}) => {
     return (
         <>
-            <h1>Alert Message</h1>
+            <p className={`alert alert-${type}`}>{msg}</p>
         </>
     )
 }
