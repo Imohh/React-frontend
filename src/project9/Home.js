@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import List from './List'
+import Alert from './Alert'
 
 const Home = () => {
     const [name, setName] = useState('')
@@ -28,6 +29,7 @@ const Home = () => {
     return(
         <>
             <form onSubmit={handleSubmit}>
+                {alert.show && <Alert />}
                 <input 
                     type="text"
                     value={name}
