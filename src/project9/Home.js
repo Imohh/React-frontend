@@ -29,7 +29,7 @@ const Home = () => {
     return(
         <>
             <form onSubmit={handleSubmit}>
-                {alert.show && <Alert />}
+                {alert.show && <Alert {...alert} />}
                 <input 
                     type="text"
                     value={name}
