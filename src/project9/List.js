@@ -1,12 +1,12 @@
-const List = ({items, deleteItem}) => {
+const List = ({ items, deleteItem, editItem }) => {
     return(
         <>
             {items.map((item) => (
                 <article key={item.id}>
                     <p>{item.title}</p>
                     <div>
-                        <button>Edit</button>
-                        <button>Delete</button>
+                        <button onClick={() => editItem(item.id)}>Edit</button>
+                        <button onClick={() => deleteItem(item.id)}>Delete</button>
                     </div>
                 </article>
             ))}
