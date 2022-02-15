@@ -5,19 +5,13 @@ import Category from './Category'
 
 const Home = () => {
     const allCategory = new Set(data.map((item) => item.category))
-    // console.log(allCategory)
-    
-    
-
     const [displayData, setDisplayData] = useState(data)
-    const [categories, setCategory] = useState([])
 
     const filterItems = (category) => {
         if (category === 'all') {
             setDisplayData(data)
             return
         }
-
         const newItems = data.filter((item) => item.category === category)
         setDisplayData(newItems)
     }

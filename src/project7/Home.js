@@ -1,8 +1,10 @@
-import Review from './Review'
+import { useState, useEffect } from 'react'
+import data from './data'
+
 const Home = () => {
     return (
         <>
-            <Review />
+        
         </>
     )
 }

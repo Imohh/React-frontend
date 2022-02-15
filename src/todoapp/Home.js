@@ -1,11 +1,7 @@
-import Review from './Review'
-
 const Home = () => {
-    
-
     return (
-        <> 
-            <Review/>
+        <>
+        
         </>
     )
 }
