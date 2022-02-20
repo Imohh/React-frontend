@@ -1,31 +1,39 @@
-import { useState } from 'react'
+import {useState} from 'react'
 import List from './List'
 
 const Home = () => {
-    const [birthdays, setBirthdays] = useState([
+    const [people,setPeople] = useState([
         {
             id: 1,
             name: 'William Shakespear',
-            age: '32 years'
+            age: '32 years',
         },
         {
             id: 2,
             name: 'Lionel Messi',
-            age: '36 years'
+            age: '38 years',
         },
         {
             id: 3,
-            name: 'Trevor Noah',
-            age: '28 years'
+            name: 'Ronaldinho Gaucho',
+            age: '29 years',
+        },
+        {
+            id: 4,
+            name: 'Ayodeji Balogun',
+            age: '34 years',
+        },
+        {
+            id: 5,
+            name: 'Michael Jackson',
+            age: '53 years',
         },
     ])
 
     return (
-        <>  
-            
-            {birthdays.length > 0 ? <List birthdays={birthdays} /> : 'there are no items to display' }
-            <button onClick={() => setBirthdays([])}>Clear all</button>            
-            
+        <>
+            {people.length > 0 ? <List people={people} /> : 'nothing to display'}
+            <button onClick={()=> setPeople([])}>Clear All</button>
         </>
     )
 }

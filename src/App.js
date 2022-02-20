@@ -3,7 +3,7 @@
 // import Tasks from "./components/Tasks";
 // import AddTask from "./components/AddTask";
 //  import Home from "./test/Home"
-import Home from './project9/Home'
+import Home from './ecommerce/Home'
 
  const App = () => {
   // const [change, setChange] = useState(true)
@@ -74,7 +74,7 @@ import Home from './project9/Home'
         {change ? "hello" : "heyo"}
       </div> */}
 
-      <Home />
+        <Home />
 
    </div>
   )

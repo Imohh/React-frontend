@@ -1,10 +1,9 @@
-const Menu = ({content}) => {
+const Menu = ({data}) => {
     return (
         <>
-            {content.map((item) => (
-                <article key={item.id}>
-                    <h3>{item.name}</h3>
-                    <p>{item.detail}</p>
+            {data.map((item) => (
+                <article>
+                    <h3>{item.category}</h3>
                 </article>
             ))}
         </>

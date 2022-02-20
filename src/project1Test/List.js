@@ -1,11 +1,11 @@
-const List = ({birthdays}) => {
+const List = ({people}) => {
     return (
         <>
-            {birthdays.map((birthday) => (
-                <article key={birthday.id}>
-                    <h2>{birthday.name}</h2>
-                    <p>{birthday.age}</p>
-                </article>
+            {people.map((person) => (
+                <artile key={person.id}>
+                    <h2>{person.name}</h2>
+                    <p>{person.age}</p>
+                </artile>
             ))}
         </>
     )

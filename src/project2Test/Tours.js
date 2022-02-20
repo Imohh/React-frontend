@@ -1,11 +1,12 @@
 import Tour from './Tour'
 
-const Tours = ({tours,onDelete}) => {
+const Tours = ({people,onDelete}) => {
     return (
         <>
-            {tours.map((tour) => (
-                <Tour key={tour.id} {...tour} onDelete={onDelete}/>
+            {people.map((item) => (
+                <Tour key={item.id} {...item} onDelete={onDelete} />
             ))}
+            
         </>
     )
 }

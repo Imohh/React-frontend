@@ -1,13 +1,13 @@
-import { useState } from 'react'
+import {useState} from 'react'
 
-const Question = ({id,question,detail}) => {
-    const [showText, setShowText] = useState(false)
+const Question = ({question,detail}) => {
+    const [display,setDisplay] = useState(false)
 
     return (
         <>
-            <h3>{question}</h3>
-            <button onClick={() => setShowText(!showText)}>{showText ? '-' : '+'}</button>
-            {showText && <p>{detail}</p>}
+            <h4>{question}</h4>
+            {display && <p>{detail}</p>}
+            <button onClick={()=> setDisplay(!display)}>{display ? '-' : '+' }</button>
         </>
     )
 }

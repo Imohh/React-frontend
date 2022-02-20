@@ -1,19 +1,15 @@
-import { useState } from 'react'
-
 const Tour = ({id,name,height,text,onDelete}) => {
-    const [showText, setShowText] = useState(false)
-    const displayText = () => {
-        setShowText(!showText)
+    const showLess = () => {
+        
     }
 
     return (
         <>
-            <h1>{name}</h1>
-            <h3>{height}</h3>
-            <p>{showText ? text : `${text.substring(0,200)}...`}</p>
-            
-            <button onClick={displayText}>{showText ? 'show less' : 'show more'}</button>
-            <button onClick={() =>onDelete(id)}>Clear Tour</button>
+            <h3>{name}</h3>
+            <h4>{height}</h4>
+            <p>{text}</p>
+            <button onClick={showLess}>Show More</button>
+            <button onClick={()=> onDelete(id)}>Clean Tour</button>
         </>
     )
 }
