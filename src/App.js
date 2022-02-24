@@ -3,7 +3,7 @@
 // import Tasks from "./components/Tasks";
 // import AddTask from "./components/AddTask";
 //  import Home from "./test/Home"
-import Home from './ecommerce/Home'
+import Home from './blank/Home'
 
  const App = () => {
   // const [change, setChange] = useState(true)
