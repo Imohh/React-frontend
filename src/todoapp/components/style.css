@@ -1,5 +1,6 @@
 body {
-    text-align: center
+    text-align: center;
+    margin: 0 auto
 }
 
 .container {
@@ -29,7 +30,8 @@ button {
     border-radius: 4px;
     width: 50%;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    margin: 0 auto
 }
 
 .deleteItem {

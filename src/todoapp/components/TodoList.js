@@ -4,8 +4,8 @@ const TodoList = ({ items, deleteItem, editItem }) => {
     return(
         <>
             {items.map((item) => (
-                <article key={item.id}>
-                    <p>{item.title}</p>
+                <article className="article" key={item.id}>
+                    <p className="">{item.title}</p>
                     <div>
                         <button onClick={() => editItem(item.id)}>Edit</button>
                         <button className="deleteItem" onClick={() => deleteItem(item.id)}>Delete</button>
