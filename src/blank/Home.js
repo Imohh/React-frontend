@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <>
             <button onClick={() => setResource('breakfast')}>breakfast</button>
-            <button onClick={() => setResource('lunch')}>lunch</button>
+            {/* <button onClick={() => setResource('lunch')}>lunch</button> */}
 
             <p>{resource}</p>
         </>
