@@ -27,6 +27,9 @@ button {
 .form-submit-section {
     background: rgb(246, 233, 233);
     border-radius: 4px;
+    width: 50%;
+    justify-content: center;
+    align-items: center
 }
 
 .deleteItem {
