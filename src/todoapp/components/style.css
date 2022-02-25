@@ -1,0 +1,34 @@
+body {
+    text-align: center
+}
+
+.container {
+    padding: 10px;
+    margin: 10px
+}
+
+input {
+    height: 30px;
+    width: 70%;
+    border: none;
+    padding-left: 20px
+}
+
+button {
+    background: rgb(62, 175, 240);
+    width: 20%;
+    margin-left: 2%;
+    height: 30px;
+    border: none;
+    color: #fff;
+    cursor: pointer
+}
+
+.form-submit-section {
+    background: rgb(246, 233, 233);
+    border-radius: 4px;
+}
+
+.deleteItem {
+    background: red
+}
