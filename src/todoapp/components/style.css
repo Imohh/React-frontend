@@ -9,7 +9,11 @@ article {
 
 article p {
     background: green;
-    width: 50%
+    
+}
+
+article .buttons-div {
+    background: yellow;
 }
 
 .container {
