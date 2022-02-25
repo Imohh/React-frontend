@@ -3,6 +3,15 @@ body {
     margin: 0 auto
 }
 
+article {
+    background: red
+}
+
+article p {
+    background: green;
+    width: 50%
+}
+
 .container {
     padding: 10px;
     margin: 10px
