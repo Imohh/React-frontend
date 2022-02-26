@@ -76,6 +76,7 @@ const Home = () => {
         <>
             <div className="form-submit-section">
                 <div className="container">
+                    <h1 className="todo-h3">Add Todo</h1>
                     <form onSubmit={handleSubmit}>
                         {alert.show && <Alert {...alert} />}
                         <input 
@@ -86,12 +87,12 @@ const Home = () => {
                         <button>{isEditing ? 'Edit' : 'Add'}</button>
                     </form>
 
-                    <TodoList 
+                    { list.length > 0 ? <TodoList 
                         deleteItem={deleteItem} 
                         items={list} 
                         editItem={editItem}
-                    />
-                    {list.length> 0 && (<button onClick={()=> setList([])}>Clear All</button>)}
+                    /> : <p>nothing to display</p>}
+                    {list.length> 0 && (<button className="deleteItem" onClick={()=> setList([])}>Clear All</button>)}
                         
                 </div>
             </div>

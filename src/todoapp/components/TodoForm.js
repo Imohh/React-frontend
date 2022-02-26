@@ -6,15 +6,16 @@ const TodoForm  =() => {
 
     return (
         <>
+        <h2 className="deleteItem">Hello</h2>
             <div className="form-submit-section">
                 <div className="container">
-                    <h2>todo app</h2>
 
                     <form onSubmit="">
+                        
                         <input
                             type="text"
                             value={text}
-                            placeholder="add new todo"
+                            placeholder="add a task"
                             onChange={(e) => setText(e.target.value)} />
                     
                         <button type="submit">Add</button>

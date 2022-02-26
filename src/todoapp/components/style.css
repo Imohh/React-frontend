@@ -4,23 +4,38 @@ body {
 }
 
 article {
-    margin-top: 2%;
-    width: 100%
+    margin-top: 5%;
+    width: 100%;
+    background: rgb(53, 50, 50)
+}
+
+.article-container {
+    margin-bottom: 3%;
+}
+
+.todo-h3 {
+    color: #fff
 }
 
 .first {
     display: inline-block;
     vertical-align: middle;
-    width: 40%
+    width: 40%;
+    color: #fff;
+    text-align: left;
+}
+
+.first p {
+    text-transform: capitalize;
 }
 
 .second {
-    width: 200px;
-    background: orange;
-    float: right;
+    display: inline-block;
+    vertical-align: middle;
+    width: 40%;
+    color: #fff;
+    text-align: right;
 }
-
-
 
 .container {
     padding: 10px;
@@ -45,12 +60,17 @@ button {
 }
 
 .form-submit-section {
-    background: rgb(246, 233, 233);
+    background: rgb(19, 18, 18);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     border-radius: 4px;
     width: 50%;
     justify-content: center;
     align-items: center;
     margin: 0 auto
+}
+
+.form-submit-section p {
+    color: #fff
 }
 
 .deleteItem {
