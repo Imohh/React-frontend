@@ -5,11 +5,14 @@ const TodoList = ({ items, deleteItem, editItem }) => {
         <>
             {items.map((item) => (
                 <article className="article" key={item.id}>
-                    <p className="">{item.title}</p>
-                    <div className="buttons-div">
+                    <div className="first">
+                        <p className="">{item.title}</p>
+                    </div>
+                    <div className="first">
                         <button onClick={() => editItem(item.id)}>Edit</button>
                         <button className="deleteItem" onClick={() => deleteItem(item.id)}>Delete</button>
                     </div>
+                    <div id="clear"></div>
                 </article>
             ))}
         </>

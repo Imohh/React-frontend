@@ -4,17 +4,23 @@ body {
 }
 
 article {
-    background: red
+    margin-top: 2%;
+    width: 100%
 }
 
-article p {
-    background: green;
-    
+.first {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40%
 }
 
-article .buttons-div {
-    background: yellow;
+.second {
+    width: 200px;
+    background: orange;
+    float: right;
 }
+
+
 
 .container {
     padding: 10px;
