@@ -1,6 +1,6 @@
 # Frontend Designs
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+On this project is created several other projects to show ways to implement and use various concepts of React, from hooks, to API's and many more methodologies. There are over 12 projects here where you can use and also use to learn more about react.
 
 ## Available Scripts
 
