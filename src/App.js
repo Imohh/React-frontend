@@ -3,7 +3,7 @@
 // import Tasks from "./components/Tasks";
 // import AddTask from "./components/AddTask";
 //  import Home from "./test/Home"
-import Home from './joshua/Home'
+import React from 'react'
 
  const App = () => {
   // const [change, setChange] = useState(true)
@@ -53,7 +53,7 @@ import Home from './joshua/Home'
 
   return (
     <div className="container">
-
+      <h1>Hey There</h1>
       {/* <h1>This is counter app</h1>*/}
       
 
@@ -74,7 +74,7 @@ import Home from './joshua/Home'
         {change ? "hello" : "heyo"}
       </div> */}
 
-        <Home />
+        {/*<Home />*/}
 
    </div>
   )
